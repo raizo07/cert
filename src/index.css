@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@font-face {
+  font-family: "satoshi";
+  src: url("/Satoshi-Variable.ttf");
+}
+@tailwind utilities;
+
+input {
+  outline: none;
+  border: none;
+}
+
+.all-files-container {
+  transition: all 0.3s ease-in-out;
+}
+
+nav .active {
+  color: #8e44ad;
+  font-weight: 700;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control label {
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.form-control input,
+.form-control select {
+  padding: 20px;
+  border: 1px solid rgba(132, 132, 132, 0.5);
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  outline: none;
+  min-width: 225px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.spinner {
+  margin: 4.8rem auto;
+  width: 6.4rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(farthest-side, white 94%, #0000) top/10px 10px no-repeat,
+    conic-gradient(#0000 30%, white);
+  mask: radial-gradient(farthest-side, #0000 calc(100% - 10px), #000 0);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 10px), #000 0);
+  animation: spin 1.5s infinite linear;
+}
+
+.spinnerMini svg {
+  width: 14px;
+  height: 14px;
+  animation: spin 1.5s infinite linear;
+}
